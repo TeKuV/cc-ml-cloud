@@ -1,3 +1,14 @@
+---
+title: cc-ml-cloud
+emoji: 🚀
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: "1.32.0"
+app_file: app.py
+pinned: false
+---
+
 # 🩺 Analyse & Prédiction du Risque Cardiaque
 
 Cette application Streamlit permet d'explorer, d'analyser et de prédire la colonne `Risk` à partir d'un fichier CSV (par défaut `high.csv`).
