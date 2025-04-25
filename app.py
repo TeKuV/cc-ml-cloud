@@ -119,7 +119,11 @@ elif menu == "Prédiction personnalisée":
         if st.button("Prédire le risque", type="primary", key="predict_custom"):
             pred = risk_model.predict(input_data)
             if risk_model.task_type == "classification":
-                st.markdown(f"<h2 style='color:#4F8BF9;'>Résultat : {'<span style=\"color:red;\">Risque élevé</span>' if pred else '<span style=\"color:green;\">Risque faible</span>'} ({pred})</h2>", unsafe_allow_html=True)
+                resultat = (
+                    "<span style='color:red;'>Risque élevé</span>" if pred
+                    else "<span style='color:green;'>Risque faible</span>"
+                )
+                st.markdown(f"<h2 style='color:#4F8BF9;'>Résultat : {resultat} ({pred})</h2>", unsafe_allow_html=True)
             else:
                 st.markdown(f"<h2 style='color:#4F8BF9;'>Valeur prédite : <span style='color:orange;'>{pred:.2f}</span></h2>", unsafe_allow_html=True)
             st_lottie(lottie_ml, height=100, key="ml_pred_result")
