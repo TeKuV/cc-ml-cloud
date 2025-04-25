@@ -44,7 +44,7 @@ jobs:
         api = HfApi(token='$HF_TOKEN'); \
 
         create_repo(
-            repo_id=$HF_SPACE_ID,
+            repo_id='TeKuV/cc-ml-cloud',
             repo_type='space',
             space_sdk='streamlit',
             exist_ok=True,
@@ -52,7 +52,7 @@ jobs:
         ); \
         api.upload_folder(
             folder_path='.', 
-            repo_id=$HF_SPACE_ID, 
+            repo_id='TeKuV/cc-ml-cloud', 
             repo_type='space', 
             commit_message='Auto-deploy from GitHub Actions'
         )"
